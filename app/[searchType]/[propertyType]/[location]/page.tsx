@@ -8,7 +8,7 @@ async function getData(params: {
   const { searchType, propertyType, location } = params;
 
   const res = await fetch(
-    "http://localhost:3000/api/listings?" +
+    `${process.env.API_LISTINGS_URL}?` +
       new URLSearchParams({
         search_type: searchType,
         property_type: propertyType,
