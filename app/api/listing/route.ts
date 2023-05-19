@@ -172,8 +172,6 @@ const _housesListings = [
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
 
-  // const searchType = searchParams.get("search_type")?.toLowerCase();
-  const location = searchParams.get("location")?.toLowerCase();
   const propertyType = searchParams.get("property_type")?.toLowerCase();
   const id = searchParams.get("id")?.toLowerCase();
 

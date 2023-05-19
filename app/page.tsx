@@ -1,11 +1,13 @@
 import { redirect } from "next/navigation";
 
-async function getSearch(data) {
+async function getSearch(data: FormData) {
   "use server";
 
   const { search_type, location, property_type } = Object.fromEntries(data);
 
-  redirect(`/${search_type}/${property_type}/${location.toLowerCase()}`);
+  redirect(
+    `/${search_type}/${property_type}/${(location as string).toLowerCase()}`
+  );
 }
 
 export default async function Page() {

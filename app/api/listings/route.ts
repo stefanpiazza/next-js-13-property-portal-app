@@ -172,7 +172,6 @@ const _housesListings = [
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
 
-  // const searchType = searchParams.get("search_type")?.toLowerCase();
   const location = searchParams.get("location")?.toLowerCase();
   const propertyType = searchParams.get("property_type")?.toLowerCase();
 
@@ -195,7 +194,9 @@ export async function GET(request: Request) {
   const listings = _listings.map((listing) => {
     return {
       ...listing,
-      location: location.charAt(0).toUpperCase() + location.slice(1),
+      location: location
+        ? location.charAt(0).toUpperCase() + location.slice(1)
+        : "",
     };
   });
 

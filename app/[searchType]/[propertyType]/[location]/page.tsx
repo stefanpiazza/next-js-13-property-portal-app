@@ -39,28 +39,38 @@ export default async function Page({
     <main className="flex flex-1 flex-col">
       <ul className="flex flex-col gap-y-4">
         {listings &&
-          listings.map((listing) => {
-            const { id, location, bedrooms, bathrooms, price, type } = listing;
+          listings.map(
+            (listing: {
+              id: string;
+              location: string;
+              bedrooms: string;
+              bathrooms: string;
+              price: string;
+              type: string;
+            }) => {
+              const { id, location, bedrooms, bathrooms, price, type } =
+                listing;
 
-            return (
-              <li key={`listing-${id}`}>
-                <Link href={`/${searchType}/details/${id}`}>
-                  <article className="flex gap-4 rounded-2xl border p-4">
-                    <div className="flex h-32 w-32 flex-shrink-0 rounded-2xl bg-slate-200" />
-                    <div className="flex flex-col">
-                      <p className="text-2xl">{price}</p>
-                      <p className="text-lg">{location}</p>
-                      <p className="text-base">{type}</p>
-                      <ul className="flex items-center gap-x-2">
-                        <li className="text-base">{bedrooms} 🛏️</li>
-                        <li className="text-base">{bathrooms} 🛁</li>
-                      </ul>
-                    </div>
-                  </article>
-                </Link>
-              </li>
-            );
-          })}
+              return (
+                <li key={`listing-${id}`}>
+                  <Link href={`/${searchType}/details/${id}`}>
+                    <article className="flex gap-4 rounded-2xl border p-4">
+                      <div className="flex h-32 w-32 flex-shrink-0 rounded-2xl bg-slate-200" />
+                      <div className="flex flex-col">
+                        <p className="text-2xl">{price}</p>
+                        <p className="text-lg">{location}</p>
+                        <p className="text-base">{type}</p>
+                        <ul className="flex items-center gap-x-2">
+                          <li className="text-base">{bedrooms} 🛏️</li>
+                          <li className="text-base">{bathrooms} 🛁</li>
+                        </ul>
+                      </div>
+                    </article>
+                  </Link>
+                </li>
+              );
+            }
+          )}
       </ul>
     </main>
   );
