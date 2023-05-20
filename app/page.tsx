@@ -12,7 +12,7 @@ async function getSearch(data: FormData) {
 
 export default async function Page() {
   return (
-    <main className="flex flex-1 flex-col">
+    <main className="flex flex-1 animate-fade-in-up flex-col">
       <form
         className="flex flex-col gap-y-4 rounded-2xl border p-4"
         action={getSearch}

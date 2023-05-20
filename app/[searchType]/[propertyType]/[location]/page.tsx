@@ -36,7 +36,7 @@ export default async function Page({
   const { listings } = data;
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main className="flex flex-1 animate-fade-in-up flex-col">
       <ul className="flex flex-col gap-y-4">
         {listings &&
           listings.map(

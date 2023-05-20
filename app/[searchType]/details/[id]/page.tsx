@@ -34,7 +34,7 @@ export default async function Page({
   const { location, bedrooms, bathrooms, price, type, description } = listing;
 
   return (
-    <main className="flex flex-1 flex-col">
+    <main className="flex flex-1 animate-fade-in-up flex-col">
       <ul className="flex flex-col gap-y-4">
         <li>
           <article className="flex flex-col gap-4 rounded-2xl border p-4">
