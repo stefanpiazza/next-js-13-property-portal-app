@@ -89,7 +89,9 @@ export default async function Page({
           </div>
         </fieldset>
 
-        <button className="rounded-2xl border p-4 text-base">Submit</button>
+        <button className="rounded-2xl border p-4 text-base hover:bg-slate-200">
+          Submit
+        </button>
       </form>
     </main>
   );

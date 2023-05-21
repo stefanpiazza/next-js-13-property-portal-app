@@ -54,7 +54,9 @@ export default async function Layout({
           </datalist>
         </div>
 
-        <button className="rounded-2xl border p-4 text-base">Submit</button>
+        <button className="rounded-2xl border p-4 text-base hover:bg-slate-200">
+          Submit
+        </button>
       </form>
       {children}
     </>
