@@ -37,7 +37,7 @@ export default async function Page({
     <main className="flex flex-1 animate-fade-in-up flex-col">
       <ul className="flex flex-col gap-y-4">
         <li>
-          <article className="flex flex-col gap-4 rounded-2xl border p-4">
+          <article className="flex flex-col gap-4 rounded-2xl border bg-white p-4">
             <div className="flex aspect-video rounded-2xl bg-slate-200" />
             <div className="flex flex-col">
               <p className="text-2xl">{price}</p>
